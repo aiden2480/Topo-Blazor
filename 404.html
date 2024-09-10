@@ -85,7 +85,7 @@
     };
 
 </script>
-<script type="text/javascript">
+<!--<script type="text/javascript">
     if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("service-worker.js")
             .then(registration => {
@@ -95,4 +95,32 @@
                 console.error("Service Worker registration failed:", error);
             });
     }
+</script>-->
+<script type="text/javascript" defer>
+    let deferredInstallPrompt = null;
+
+    window.addEventListener("beforeinstallprompt", (e) => {
+        deferredInstallPrompt = e;
+
+        // Wait until the element is available, then unhide it
+        const intervalId = setInterval(() => {
+            const targetElement = document.getElementById("install-pwa-button");
+
+            if (targetElement) {
+                clearInterval(intervalId);
+                targetElement.hidden = false;
+            }
+        }, 100);
+    });
+
+    window.installPwa = async () => {
+        if (deferredInstallPrompt) {
+            deferredInstallPrompt.prompt();
+            var { outcome } = await deferredInstallPrompt.userChoice;
+
+            if (outcome === "accepted") {
+                document.getElementById("install-pwa-button").hidden = true;
+            }
+        }
+    };
 </script>
