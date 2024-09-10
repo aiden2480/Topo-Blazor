@@ -7,7 +7,7 @@
   "theme_color": "#05163d",
 
   "scope": "/Topo-Blazor/",
-  "start_url": "/Topo-Blazor/",
+  "start_url": "/Topo-Blazor/login",
 
   "orientation": "any",
   "dir": "ltr",
