@@ -142,7 +142,7 @@
         await JS.InvokeVoidAsync("installPwa");
     }
 
-    protected override async void OnInitialized()
+    protected override void OnInitialized()
     {
         _storageService.OnChange += StateHasChanged;
     }
