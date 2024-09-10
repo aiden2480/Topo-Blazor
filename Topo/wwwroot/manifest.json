@@ -1,0 +1,39 @@
+{
+  "name": "Topo",
+  "short_name": "Topo",
+  "description": "Topo is a helper application to assist scout leaders in getting meaningful reports out of the Scouts Australia Terrain application.",
+
+  "background_color": "#3a0647",
+  "theme_color": "#05163d",
+
+  "scope": "/Topo-Blazor/",
+  "start_url": "/Topo-Blazor/login",
+
+  "orientation": "any",
+  "dir": "ltr",
+  "display": "standalone",
+  "lang": "en",
+
+  "icons": [
+    {
+      "src": "G12-Map-icon-16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "G12-Map-icon-64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "G12-Map-icon-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "G12-Map-icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
